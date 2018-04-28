@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
 <body>
 
     <div class="top dark">
@@ -18,8 +20,8 @@
     </div>
     <div class="content">
         <div id="home" class="section center content text-b">
-            <div class="banner">
-                <h1 class="text-d">Big Mama Gayle and her Sugar Daddies</h1>
+            <h1 class="text-d">Big Mama Gayle and her Sugar Daddies</h1>
+            <div class="banner" id="banner">
             </div>
         </div>
 
@@ -30,17 +32,31 @@
                 <div class="container">
                     <h5 class="text-italic text-lgray">Vocals</h5>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo sapien mauris,
-                        vitae venenatis lorem sodales a. Duis imperdiet augue a nisl pulvinar, eget vulputate
-                        lorem lobortis. Suspendisse lorem tortor, scelerisque in posuere eu, placerat eget
-                        enim. Praesent accumsan tempus placerat. Vivamus bibendum porta quam ut pretium. Donec
-                        vestibulum nibh at tortor tincidunt finibus. Curabitur suscipit congue porta. Vivamus
-                        scelerisque dolor est, a convallis odio mollis in.
+                        Big Mama Gayle returns us to an era in show business when entertainment was truly entertaining.
+                        Theatrically inspired by lavish showbiz icons such as old-time cabaret and Las Vegas productions,
+                        with enough costuming to make a drag queen feel under-dressed, Big Mama Gayle and Her Sugar Daddies
+                        are indeed 100% pure entertainers.
+                    </p>
+                    <p>
+                        Starting in musical theater in the 1960's, Big Mama Gayle's career landed her on the golden stages
+                        of Broadway. With countless shows on the East Coast, West Coast, abroad, and everywhere in between,
+                        Gayle even found herself gracing the pages of noteworthy publications such as Life Magazine and, yes
+                        it's true - Playboy!
+                    </p>
+                    <p>
+                        With countless props and an average of 6 costume changes per hour, Big Mama Gayle's rock and blues
+                        show flies by with a flurry of sequins, feather boas, and inflatable monkeys. It's glitz, glamor,
+                        Rock 'n Roll...and side splitting frolic for the whole family.
                     </p>
                 </div>
             </div>
             <div class="container">
                 <h2 class="text-white">The Sugar Daddies</h2>
+                <p>
+                    Not to be overlooked, Gayle's Sugar Daddies are five of the hottest musicians to be found in the Pacific
+                    Northwest. They provide an impressive musical backdrop for your listening pleasure, but with Big Mama
+                    Gayle on stage - you'll find it impossible to look away.
+                </p>
                 <div class="container">
                     <h3 class="text-c">Ken</h3>
                     <h5 class="text-italic text-lgray">Guitar/Vocals</h5>
@@ -143,11 +159,11 @@
                     </div>
                 </div>
                 <div class="third">
-                    <div class="light margin-8 card-a">
-                        <div class="card-a-top">
+                    <div class="light margin-8 card-d">
+                        <div class="card-d-top">
                             <p class="text-bold">Garlic Festival Afterparty</p>
                         </div>
-                        <div class="card-a-bottom">
+                        <div class="card-d-bottom">
                             <i class="fa fa-calendar" style="width:30px"></i>11 Aug 2018 <br>
                             <i class="fa fa-glass" style="width:30px"></i>Rogue Pub & Brewery<br>
                             <i class="fa fa-map-marker" style="width:30px"></i>North Plains, OR<br>
@@ -204,25 +220,50 @@
         <div id="contact" class="container section center content">
             <h1 class="text-d">Contact Us</h1>
             <h4 class="text-c text-italic">Are you a fan? Tell Mama!</h4>
-            <div class="row">
-                <div class="half">
-                    <div class="container light margin-8 left">
-                        <i class="fa fa-phone" style="width:30px"></i> (503) 555-5555<br>
-                        <i class="fa fa-envelope" style="width:30px"> </i> bigmamagayle@gmail.com<br>
-                        <i class="fa fa-facebook-official" style="width:30px"></i><a href="https://www.facebook.com/Big-Mama-Gayle-and-Her-Sugar-Daddies-131958450152864/">facebook.com/bigmamagayle</a><br>
+
+            <div class="container light margin-8">
+                <form id="contactForm" action="/action_page.php" onsubmit="return validateForm();" target="_blank">
+                    <div class="row">
+                        <div class="half padding-small">
+                            <input id="name" class="input margin-b-16 padding-small" type="text" placeholder="Name*" name="name" required>
+                            <input id="email" class="input margin-b-16 padding-small" type="text" placeholder="Email*" name="email" required>
+                            <input id="phone" class="input margin-b-16 padding-small" type="text" placeholder="Phone" name="phone">
+                        </div>
+                        <div class="half padding-small padding-lr-24">
+                            <textarea id="message" class="padding-small" placeholder="Message*" name="message" required></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="right">
+                    <span id="error" class="hide">Error message</span>
+                    <button class="button" onclick="clearForm()">CLEAR</button>
+                    <button class="button" type="submit" form="contactForm">SEND</button>
+                </div>
+            </div>
+
+            <div class="container light margin-8">
+
+                <div class="row">
+                    <div class="third">
+                        <div class="padding-tb-8">
+                            <h4>Email</h4>
+                            <i class="fa fa-envelope" style="width:30px"></i> bigmamagayle@example.com
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="padding-tb-8">
+                            <h4>Phone</h4>
+                            <i class="fa fa-phone" style="width:30px"></i> (503) 555-5555
+                        </div>
+                    </div>
+                    <div class="third">
+                        <div class="padding-tb-8">
+                            <h4>Facebook</h4>
+                            <i class="fa fa-facebook-official" style="width:30px"></i><a href="https://www.facebook.com/Big-Mama-Gayle-and-Her-Sugar-Daddies-131958450152864/">facebook.com/bigmamagayle</a>
+                        </div>
                     </div>
                 </div>
-                <div class="half">
-                    <div class="light margin-8 padding-tb-8">
-                        <form action="/action_page.php" target="_blank">
-                            <input class="input" type="text" placeholder="Name" name="name">
-                            <input class="input" type="text" placeholder="Email" name="email">
-                            <input class="input" type="text" placeholder="Message" name="message">
-                            <br>
-                            <button class="button" type="submit">SEND</button>
-                        </form>
-                    </div>
-                </div>
+
             </div>
         </div>
 
