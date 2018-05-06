@@ -3,14 +3,29 @@
     --color-b: #e9a6d3;
     --color-c: #66ace6;
     --color-d: #f0f7b3;
+    --color-charcoal: #111111;
 }
 
 html{box-sizing:border-box}
 *,*::before,*::after{box-sizing:inherit;}
-body{background-color:#000000; color: #ffffff; font-family: "Calibri", sans-serif;}
+body {
+    background-color: var(--color-charcoal);
+    color: #ffffff;
+    font-family: "Calibri", sans-serif;
+    border: none;
+}
 .banner {
-        background-image: url("../media/images/gayle.jpg");
-        height: 500px;
+    background-image: url("../media/images/gayle.jpg");
+    height: 500px;
+}
+.logo {
+    width: 100%;
+    height: auto;
+}
+.menu-logo {
+    height: inherit;
+    width: auto;
+    float: right;
 }
 .member-img {
     width: 100%;
@@ -187,7 +202,8 @@ h1, h2, h3, h4, h5, h6, p {
 h1 {
     margin-top: 30px;
     letter-spacing: 5px;
-    font-size: 40px;
+    font-size: 44px;
+    font-weight: 600;
     text-transform: uppercase;
 }
 h2 {
@@ -236,11 +252,14 @@ tr:nth-child(even) {
     width: 100%;
     z-index: 1;
 }
-.menu-bar {
+.bar {
+    height: 42px;
     width:100%;
+}
+.menu {
     padding: 12px 0px;
     overflow: hidden;
-    background-color: var(--color-a);
+    float: left;
 }
 .menu-item {
     padding: 12px 24px;
