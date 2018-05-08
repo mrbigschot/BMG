@@ -1,11 +1,11 @@
 var slideIndex = 0;
-var slides = ["gayle.jpg", "band_old.jpg"];
+var slides = ["gayle.jpg", "chalk_art.jpg"];
 
 function carousel() {
-    $("#banner").css("background-image", 'url("media/images/' + slides[slideIndex] + '")');
+    $("#banner").attr("src", "media/images/" + slides[slideIndex]);
     slideIndex++;
     if (slideIndex >= slides.length) {slideIndex = 0}
-    setTimeout(carousel, 10000);
+    setTimeout(carousel, 3000);
 }
 
 // Form functions
