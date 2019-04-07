@@ -1,0 +1,34 @@
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 25%;
+    top: 10%;
+    width: 50%;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.2), 0 0 8px 8px rgba(0,0,0,0.19);
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+    padding: 0 10px 10px 10px;
+}
+.open {
+    display: block;
+}
+.close {
+    color: #888888;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: var(--color-a);
+    text-decoration: none;
+    cursor: pointer;
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}

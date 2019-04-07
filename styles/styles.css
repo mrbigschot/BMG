@@ -1,0 +1,618 @@
+:root {
+    --color-a: #700851;
+    --color-a-sh: #480534;
+    --color-a-h: #bf0d89;
+    --color-b: #e9a6d3;
+    --color-c: #66ace6;
+    --color-c-sh: #0a2942;
+    --color-d: #f0f7b3;
+    --color-charcoal: #111111;
+    --color-charcoal-h: #222222;
+}
+body {
+    margin: 0px;
+    background-color: var(--color-charcoal);
+    font-family: "Calibri", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+h2 {
+    color: var(--color-d);
+    letter-spacing: 5px;
+    font-size: 44px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0px;
+    margin: 5px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px;
+    margin: 0px;
+}
+
+/********** PAGE HEADER **********/
+
+div.header {
+    background-color: var(--color-a);
+    border-bottom: 2px solid var(--color-a-h);
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+}
+div.navigation {
+
+}
+ul.navigation {
+    list-style-type: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+ul.navigation li {
+    display: block;
+    flex: 1;
+}
+ul.navigation li a.navButton {
+    height: 24px;
+    padding: 12px 5px 5px 5px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-d);
+    transition: background-color .5s, color .5s;
+    letter-spacing: 2px;
+}
+ul.navigation li a.navButton:hover {
+    background-color: #ffffff;
+    color: var(--color-c);
+}
+
+/********** CONTENT **********/
+
+div.content {
+    text-align: center;
+}
+div.section {
+    padding: 32px 16px;
+    width: 900px;
+    display: inline-block;
+}
+div.section-header {
+    margin-top: 30px;
+    padding: 20px 0px 20px 0px;
+    background-image: linear-gradient(to right, var(--color-charcoal), var(--color-a), var(--color-charcoal));
+    border-top: 2px solid var(--color-b);
+    border-bottom: 2px solid var(--color-b);
+}
+div.section-content {
+    padding: 10px 50px 10px 50px;
+    background-color: var(--color-charcoal-h);
+    border-left: 2px solid var(--color-a);
+    border-bottom: 2px solid var(--color-a);
+    border-right: 2px solid var(--color-a);
+    border-radius: 0px 0px 10px 10px;
+    color: var(--color-b);
+}
+div.section-content-1 {
+    padding: 0px 0px 20px 0px;
+}
+div.section-content-2 {
+    padding: 0px 0px 20px 0px;
+}
+div.section-content-2 p {
+    font-size: 16px;
+}
+div.section-content-2 ul {
+    padding: 0px;
+    list-style-type: none;
+}
+div.section-content-2 ul li {
+    padding: 10px;
+}
+
+/********** BAND PROFILES **********/
+
+div#band h3 {
+    color: #ffffff;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    padding: 20px 0px 5px 0px;
+}
+div#band h4 {
+    color: var(--color-d);
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+div#band h5 {
+    font-style: italic;
+    color: #aaaaaa;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+span.instrument {
+    font-style: italic;
+    color: #aaaaaa;
+    font-size: inherit;
+    font-weight: 400;
+}
+div.profile {
+    display: flex;
+    padding: 10px;
+    height: 350px;
+}
+div.profile-bio {
+    flex: 1;
+    padding: 16px;
+    margin: 16px;
+    background-color: var(--color-charcoal);
+    border-radius: 10px;
+}
+div.profile-bio div.bio-header {
+    border-bottom: 2px solid var(--color-c);
+    padding: 0px 0px 10px 0px;
+}
+div.profile-bio h5 {
+    font-size: 18px;
+}
+div.profile-bio p {
+    font-size: 12px;
+}
+div.profile-photo {
+    flex: 1;
+    margin: 16px;
+}
+img.profile-photo {
+    max-width: 80%;
+    max-height: 80%;
+    padding: 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+p.photo-caption {
+    font-size: 8px;
+    color: #999999;
+}
+
+/********** UPCOMING SHOWS **********/
+
+div#shows h4 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-style: italic;
+    color: var(--color-c);
+}
+div#shows h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+div.card-row {
+    display: flex;
+    height: 250px;
+}
+div.card {
+    flex: 1;
+    margin: 5px;
+}
+div.card-bottom {
+    height:70%;
+}
+div.card-bottom ul {
+    padding: 5px 5px 5px 5px;
+    margin: 0px;
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+div.card-bottom ul li {
+    padding: 5px;
+    list-style-type: none;
+}
+div.card-bottom ul li i {
+    text-align: left;
+}
+div.card-top {
+    padding: 15px 5px 15px 5px;
+}
+div.card-c {
+    border: 4px solid var(--color-c);
+    background-color: #ffffff;
+    color: var(--color-c);
+}
+div.card-c div.card-top {
+    background-color: var(--color-c);
+    color: var(--color-d);
+}
+div.card-d {
+    border: 4px solid var(--color-d);
+    background-color: var(--color-a);
+    color: var(--color-d);
+}
+div.card-d div.card-top {
+    background-color: var(--color-d);
+    color: var(--color-a);
+}
+div#shows table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    color: var(--color-a);
+    text-align: left;
+    font-size: 12px;
+}
+div#shows td {
+    padding: 5px 5px 5px 5px;
+}
+div#shows thead {
+    background-color: var(--color-a);
+    color: var(--color-d);
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;
+}
+div#shows tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/********** CONTACT **********/
+
+div#contact div.section-content {
+    padding-bottom: 30px;
+}
+div#contact h4 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-style: italic;
+    color: var(--color-c);
+}
+div#contact h5 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-style: italic;
+    color: var(--color-a);
+    margin-bottom: 5px;
+}
+div#contact h6 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-a);
+    margin-bottom: 5px;
+}
+div#contact div.section-content-2 {
+    background-color: #ffffff;
+    color: var(--color-a);
+    padding: 20px 20px 5px 20px;
+}
+form#contactForm {
+    background-color: #ffffff;
+    color: var(--color-a);
+    padding: 20px 20px 5px 20px;
+}
+div.contact-sections {
+    display: flex;
+}
+div.contact-section {
+    flex: 1;
+    display: inline;
+    padding: 5px;
+}
+div.contact-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+textarea {
+    width: 80%;
+    height: 160px;
+    font-family: "Calibri", sans-serif;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #eeeeee;
+    resize: none;
+    padding: 8px;
+}
+input {
+    font-family: "Calibri", sans-serif;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 10px 10px 10px 10px;
+    background-color: #eeeeee;
+    margin: 5px;
+}
+div.buttonContainer {
+    padding: 10px;
+    text-align: right;
+}
+div.buttonContainer button {
+    width: 150px;
+    padding: 8px;
+    background-color: var(--color-a);
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+div.buttonContainer button:hover {
+    background-color: var(--color-b);
+}
+div.otherContacts {
+    display: flex;
+    padding: 15px;
+}
+div.otherContact {
+    flex: 1;
+}
+div.otherContact a {
+    height: 24px;
+    color: inherit;
+    padding: 12px 5px 5px 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: color .5s;
+    display: block;
+}
+div.otherContact a:hover {
+    color: var(--color-c);
+}
+
+/********** MEDIA **********/
+
+div#media h3 {
+    color: #ffffff;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    padding: 10px 0px 10px 0px;
+}
+div.galleryContainer {
+    background-color: var(--color-a);
+    padding: 30px 10px 30px 10px;
+}
+div.gallery {
+    display: flex;
+}
+div.left-arrow,
+div.right-arrow {
+    flex: 1;
+    font-size: 30px;
+    line-height: 5;
+    padding: 10px;
+}
+div.left-arrow i,
+div.right-arrow i {
+    color: var(--color-a-sh);
+    cursor: pointer;
+    transition: color 1s;
+}
+div.left-arrow i:hover,
+div.right-arrow i:hover {
+    color: var(--color-d);
+}
+div.gallery-content {
+    overflow-x: scroll;
+    border-radius: 5px;
+    background-color: var(--color-a-sh);
+    scroll-behavior: smooth;
+}
+table#galleryTable {
+    height: 100%;
+}
+table#galleryTable tr {
+}
+.thumbnailBackground {
+    margin: 20px 10px 20px 10px;
+    width: 150px;
+    height: 100px;
+    background-color: #000000;
+    border: 2px solid var(--color-a-sh);
+    position: relative;
+    transition: border .5s;
+    cursor: pointer;
+}
+.thumbnailBackground:hover {
+    border: 2px solid var(--color-c);
+}
+.photoThumbnail {
+    max-width:100%;
+    max-height:100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.photoBackground {
+    margin-top: 40px;
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    position: relative;
+}
+.photo {
+    max-width:100%;
+    max-height:100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+div#photoPopup {
+    background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+div.musicContainer {
+    background-color: var(--color-a);
+    padding: 10px 10px 30px 10px;
+}
+div.audioPlayer {
+    background-color: var(--color-a);
+    padding:10px;
+}
+audio {
+    width:100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+div.audio-controls {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--color-a-sh);
+    display: block;
+}
+div.audio-controls div.control {
+    height: 100%;
+    display: inline-block;
+}
+div.audio-controls button {
+    color: #ffffff;
+    background-color: var(--color-a-sh);
+    border: none;
+    padding: 10px;
+    width: 50px;
+    font-size: 16px;
+    transition: color .25s;
+    cursor: pointer;
+    text-align: left;
+    float: left;
+}
+
+div.audio-controls div.sliderContainer i {
+    color: #ffffff;
+    font-size: 16px;
+    transition: color .25s;
+    cursor: pointer;
+}
+div.audio-controls div.sliderContainer i:hover {
+    color: var(--color-d);
+}
+div.audio-controls div.progress {
+    width: 75%;
+}
+div.audio-controls div.volume {
+    width: 15%;
+}
+div.audio-controls div.progress input.slider {
+    width: 75%;
+}
+div.audio-controls div.volume input.slider {
+    width: 75%;
+}
+div.label {
+    padding: 7px 10px 5px 5px;
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+div.button {
+    padding: 5px 10px 5px 5px;
+    display: inline-block;
+    float: left;
+    text-align: left;
+}
+div.audio-controls div.progress div.label {
+    font-size: 12px;
+    color: #aaaaaa;
+    width: 15%;
+}
+div.audio-controls div.progress span#positionLabel {
+    color: #ffffff;
+}
+div.sliderContainer {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+}
+input.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    height: 5px;
+    background: #666666;
+    outline: none;
+    padding: 0px;
+    margin: 10px 0px 10px 0px;
+    height: 5px;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+input.slider::-ms-fill-lower {
+    background-color: var(--color-c);
+    border:5px;
+}
+input.slider::-moz-range-progress {
+    background-color: var(--color-c);
+    border:5px;
+    height: 5px
+}
+input.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 4px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    background-color: var(--color-d);
+    border: none;
+}
+input.slider::-moz-range-thumb {
+    width: 4px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    background-color: var(--color-d);
+    border: none;
+}
+ul.playlist {
+    background-color: var(--color-a-sh);
+    height: 140px;
+    overflow-y: scroll;
+    list-style-type: none;
+    padding: 0px;
+}
+ul.playlist li {
+    cursor: pointer;
+    padding: 5px;
+    transition: color .25s, background-color .25s;
+}
+ul.playlist li:nth-child(even) {
+    background-color: #330324;
+}
+ul.playlist li.selected {
+    color: var(--color-d);
+}
+ul.playlist li:hover {
+    color: var(--color-c);
+    background-color: var(--color-a-h);
+}
+ul.playlist li.selected:hover {
+    color: var(--color-d);
+    background-color: var(--color-a-h);
+}
