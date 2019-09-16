@@ -1,3 +1,5 @@
+var bannerIdx = 0;
+
 function initPlaylist() {
 
 }
@@ -149,4 +151,16 @@ function closePhoto() {
 
 function startup() {
     initMusicPlayer();
+    setTimeout(cycleBanner, 15000);
+}
+
+function cycleBanner() {
+    var quotes = document.getElementsByClassName("quote");
+    quotes[bannerIdx].setAttribute("class", "quote");
+    bannerIdx++;
+    if (bannerIdx >= quotes.length) {
+        bannerIdx = 0;
+    }
+    quotes[bannerIdx].setAttribute("class", "quote active");
+    setTimeout(cycleBanner, 15000);
 }
